@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../images/login-bk.jpg') no-repeat center center fixed;
+    background-size: cover;       /* Make it fill the screen */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;  /* Align login box to left */
+    align-items: center;          /* Vertically center login box */
+    padding-left: 50px;           /* Space from left edge */
+}
+
+.login-container {
+    width: 450px;
+    padding: 25px;
+    border-radius: 8px;
+    background: #D5E6D5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transform: translateY(50px);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #04653c;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.error {
+	color: red;
+}
+
+/* Toggle Slider Styles */
+.toggle-container {
+    position: relative;
+    display: flex;
+    width: 220px;
+    margin: 15px auto;
+    border-radius: 25px;
+    background: #f0f0f0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.toggle-container input {
+    display: none;
+}
+
+.toggle-option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #04653c;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+/* Active text color */
+#customer:checked ~ label[for="customer"] {
+    color: white;
+}
+#admin:checked ~ label[for="admin"] {
+    color: white;
+}
+
+/* Move slider */
+#admin:checked ~ .toggle-slider {
+    transform: translateX(100%);
+}
